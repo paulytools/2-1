@@ -4,7 +4,7 @@ public class ExteriorFeature implements Feature {
 
   public ExteriorFeature() {
 
-    this.exteriorFeature = "Something";
+    this.exteriorFeature;
 
   }
 
@@ -15,7 +15,7 @@ public class ExteriorFeature implements Feature {
 
   public String getExteriorFeature() {
 
-
+    return this.exteriorFeature;
 
   }
 

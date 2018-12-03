@@ -29,39 +29,27 @@ public class Vehicle implements Engine, Chassis {
 
   }
 
-  public static void main(String[] args) {
-
-
-    // Placeholder for now
-    Date date = new Date();
-
-
-
-
-    printGenericStrings();
-
-    printSpecificStrings("Honda",
-        date,
-        "Honda", "Prelude", null,
-        "Honda", date,
-        "H23A1", "88 AKI", 4,
-        "2WD: Two-Wheel Drive");
-
-
-  }
-
-
-
-
-
   public Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer,
       String vehicleMake, String vehicleModel, Chassis vehicleFrame, String vehicleType,
       String driveTrain, Engine vehicleEngine) {
 
+
+
   }
 
-  // Public method implementations for all of the public methods found in
-  // the Engine interface.
+  public Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer,
+      String vehicleMake, String vehicleModel, Chassis vehicleFrame, String vehicleType,
+      String driveTrain, Engine vehicleEngine, String vehicleChassis) {
+    this.vehicleManufacturedDate = vehicleManufacturedDate;
+    this.vehicleManufacturer = vehicleManufacturer;
+    this.vehicleMake = vehicleMake;
+    this.vehicleModel = vehicleModel;
+    this.vehicleFrame = vehicleFrame;
+    this.vehicleType = vehicleType;
+    this.driveTrain = driveTrain;
+    this.vehicleEngine = vehicleEngine;
+    this.vehicleChassis = vehicleChassis;
+  }
 
   public void setEngineCylinders(int engineCylinders) {
 

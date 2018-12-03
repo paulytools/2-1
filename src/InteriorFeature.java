@@ -2,14 +2,6 @@ public class InteriorFeature implements Feature {
 
   String interiorFeature;
 
-  public static void main(String[] args) {
-
-    printAllFuelGradeValues();
-    printSpecificFuelGradeValues();
-
-  }
-
-
   public InteriorFeature() {
 
     this.interiorFeature = "Generic";

@@ -1,16 +1,6 @@
 public class VehicleFrame implements Chassis {
 
-  String vehicleFrameType;
-
-  String vehicleFrameType = "Unibody";
-
-
-  public static void main(String[] args) {
-
-    VehicleFrame vehicleFrame1 = new VehicleFrame();
-    VehicleFrame vehicleFrame2 = new VehicleFrame(vehicleFrameType);
-
-  }
+  private String vehicleFrameType;
 
   VehicleFrame() {
 
@@ -26,7 +16,7 @@ public class VehicleFrame implements Chassis {
 
   public Chassis getChassisType() {
 
-    return this;
+    return this; // return copy of this class
 
   }
 
@@ -37,11 +27,10 @@ public class VehicleFrame implements Chassis {
 
   }
 
-  public String toString() {
-
-    return "Chassis\t: Chassis\n" +
-        "Vehicle Frame\t: Unibody";
-
+  @Override
+  public String toString(String chassisName) {
+    return "Chassis : " + chassisName +
+        "Vehicle Frame : " + vehicleFrameType + '\'' +
+        '}';
   }
-
 }

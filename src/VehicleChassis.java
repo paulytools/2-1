@@ -2,14 +2,6 @@ public class VehicleChassis implements Chassis {
 
   String chassisName;
 
-  public static void main(String[] args) {
-
-    VehicleChassis vehicleChassis1 = new VehicleChassis();
-    VehicleChassis vehicleChassis2 = new VehicleChassis("Kool Chassis");
-
-    printDetails();
-
-  }
 
   VehicleChassis() {
 
@@ -23,7 +15,7 @@ public class VehicleChassis implements Chassis {
 
   }
 
-  public Chassis getChassisType() {
+  public VehicleChassis getChassisType() {
 
     return this;
 

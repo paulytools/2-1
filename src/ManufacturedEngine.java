@@ -13,29 +13,15 @@ public class ManufacturedEngine implements Engine {
   String engineType;
   String driveTrain;
 
-
-  public static void main(String[] args) {
-
-    // So we can display the current time within the methods since we cannot
-    // reference non-static variables here.
-    Date date = new Date();
-
-    // Calling the methods.
-    printGenericStrings(date);
-    printStringsWithParameters("Honda", date, "H-Series", "H23A1",
-        "88 AKI", 4, "2WD: Two-Wheel Drive");
-
-  }
-
   ManufacturedEngine() {
 
-    engineManufacturer = "Generic";
-    engineManufacturedDate = new Date();
-    engineMake = "Generic";
-    engineModel = "Generic";
-    engineCylinders = 0;
-    engineType = "85 AKI";
-    driveTrain = "2WD: Two-Wheel Drive";
+    this.engineManufacturer = "Generic";
+    this.engineManufacturedDate = new Date();
+    this.engineMake = "Generic";
+    this.engineModel = "Generic";
+    this.engineCylinders = 0;
+    this.engineType = "85 AKI";
+    this.driveTrain = "2WD: Two-Wheel Drive";
 
   }
 
