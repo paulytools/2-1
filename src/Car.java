@@ -37,7 +37,7 @@ public class Car extends Vehicle {
   public String toString() {
 
     return "Manufacturer Name\t: Generic\n" +
-        "Manufactured Date\t: " + this.vehicleManufacturedDate + "\n" +
+        "Manufactured Date\t: " + Vehicle. + "\n" +
         "Vehicle Make\t: Generic\n" +
         "Vehicle Model\t: Generic\n" +
         "Vehicle Type\t: None\n" +

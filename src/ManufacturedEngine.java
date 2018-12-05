@@ -2,16 +2,13 @@ import java.util.Date;
 
 public class ManufacturedEngine implements Engine {
 
-  String engineManufacturer;
-
-  Date engineManufacturedDate;
-
-  String engineMake;
-
-  String engineModel;
-  int engineCylinders;
-  String engineType;
-  String driveTrain;
+  private String engineManufacturer;
+  private Date engineManufacturedDate;
+  private String engineMake;
+  private String engineModel;
+  private int engineCylinders;
+  private String engineType;
+  private String driveTrain;
 
   ManufacturedEngine() {
 
@@ -19,26 +16,23 @@ public class ManufacturedEngine implements Engine {
     this.engineManufacturedDate = new Date();
     this.engineMake = "Generic";
     this.engineModel = "Generic";
-    this.engineCylinders = 0;
+    this.engineCylinders = 4;
     this.engineType = "85 AKI";
     this.driveTrain = "2WD: Two-Wheel Drive";
 
   }
 
-  // 5.3 ?
-  // A public overloaded constructor with values for all of the variables defined above.
-
   ManufacturedEngine(String engineManufacturer, Date engineManufacturedDate,
       String engineMake, String engineModel, String engineType, int engineCylinders,
       String driveTrain) {
 
-    this.engineManufacturer = "Generic";
-    this.engineManufacturedDate = new Date();
-    this.engineMake = "Generic";
-    this.engineModel = "Generic";
-    this.engineCylinders = 0;
-    this.engineType = "85 AKI";
-    this.driveTrain = "2WD: Two-Wheel Drive";
+    this.engineManufacturer = engineManufacturer;
+    this.engineManufacturedDate = engineManufacturedDate;
+    this.engineMake = engineMake;
+    this.engineModel = engineModel;
+    this.engineCylinders = engineCylinders;
+    this.engineType = engineType;
+    this.driveTrain = driveTrain;
 
   }
 
@@ -97,10 +91,10 @@ public class ManufacturedEngine implements Engine {
 
   }
 
-  public static void printGenericStrings(Date engineManufacturedDate) {
+  public void printGenericStrings() {
 
-    System.out.printf("Engine Manufacturer : " + "Generic" + "\n" +
-        "Engine Manufactured : " + engineManufacturedDate + "\n" +
+    System.out.println("Engine Manufacturer : " + "Generic" + "\n" +
+        "Engine Manufactured : " + this.engineManufacturedDate + "\n" +
         "Engine Make\t : " + "Generic" + "\n" +
         "Engine Model\t : " + "Generic" + "\n" +
         "Engine Type\t : " + "85 AKI" + "\n" +
@@ -110,18 +104,15 @@ public class ManufacturedEngine implements Engine {
 
   }
 
-  public static void printStringsWithParameters(String engineManufacturer,
-      Date engineManufacturedDate,
-      String engineMake, String engineModel, String engineType, int engineCylinders,
-      String driveTrain) {
+  public void printStringsWithParameters() {
 
-    System.out.printf("Engine Manufacturer : " + engineManufacturer + "\n" +
-        "Engine Manufactured : " + engineManufacturedDate + "\n" +
-        "Engine Make\t : " + engineMake + "\n" +
-        "Engine Model\t : " + engineModel + "\n" +
-        "Engine Type\t : " + engineType + "\n" +
-        "Engine Cylinders\t : " + engineCylinders + "\n" +
-        "Drive Train\t : " + driveTrain);
+    System.out.println("Engine Manufacturer : " + this.engineManufacturer + "\n" +
+        "Engine Manufactured : " + this.engineManufacturedDate + "\n" +
+        "Engine Make\t : " + this.engineMake + "\n" +
+        "Engine Model\t : " + this.engineModel + "\n" +
+        "Engine Type\t : " + this.engineType + "\n" +
+        "Engine Cylinders\t : " + this.engineCylinders + "\n" +
+        "Drive Train\t : " + this.driveTrain);
 
   }
 

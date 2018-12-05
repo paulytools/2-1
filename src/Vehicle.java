@@ -2,15 +2,15 @@ import java.util.Date;
 
 public class Vehicle implements Engine, Chassis {
 
-  Date vehicleManufacturedDate;
-  String vehicleManufacturer;
-  String vehicleMake;
-  String vehicleModel;
-  Chassis vehicleFrame;
-  String vehicleType;
-  String driveTrain;
-  Engine vehicleEngine;
-  String vehicleChassis;
+  private Date vehicleManufacturedDate;
+  private String vehicleManufacturer;
+  private String vehicleMake;
+  private String vehicleModel;
+  private Chassis vehicleFrame;
+  private String vehicleType;
+  private String driveTrain;
+  private Engine vehicleEngine;
+  private String vehicleChassis;
 
 
   public Vehicle() {
@@ -21,10 +21,10 @@ public class Vehicle implements Engine, Chassis {
     this.vehicleManufacturer = "Generic";
     this.vehicleMake = "Generic";
     this.vehicleModel = "Generic";
-    this.vehicleFrame.setChassisType(chassis);
+    this.vehicleFrame = new Vehicle();
     this.vehicleType = "Generic";
     this.driveTrain = "Generic";
-    this.vehicleEngine.setEngineType(Engine);
+    this.vehicleEngine = new Vehicle();
 
 
   }
@@ -33,13 +33,6 @@ public class Vehicle implements Engine, Chassis {
       String vehicleMake, String vehicleModel, Chassis vehicleFrame, String vehicleType,
       String driveTrain, Engine vehicleEngine) {
 
-
-
-  }
-
-  public Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer,
-      String vehicleMake, String vehicleModel, Chassis vehicleFrame, String vehicleType,
-      String driveTrain, Engine vehicleEngine, String vehicleChassis) {
     this.vehicleManufacturedDate = vehicleManufacturedDate;
     this.vehicleManufacturer = vehicleManufacturer;
     this.vehicleMake = vehicleMake;
@@ -48,7 +41,8 @@ public class Vehicle implements Engine, Chassis {
     this.vehicleType = vehicleType;
     this.driveTrain = driveTrain;
     this.vehicleEngine = vehicleEngine;
-    this.vehicleChassis = vehicleChassis;
+
+
   }
 
   public void setEngineCylinders(int engineCylinders) {
@@ -60,7 +54,7 @@ public class Vehicle implements Engine, Chassis {
 
   public void setEngineManufacturedDate(Date date) {
 
-    this.setEngineManufacturedDate(vehicleManufacturedDate);
+    this.setEngineManufacturedDate(date);
 
   }
 
@@ -70,6 +64,11 @@ public class Vehicle implements Engine, Chassis {
 
   }
 
+  public Chassis getChassisType() {
+
+
+
+  }
 
   public void setEngineMake(String engineMake) {
     this.setEngineMake(engineMake);
@@ -93,30 +92,6 @@ public class Vehicle implements Engine, Chassis {
   public void setEngineType(String fuel) {
 
     this.setEngineType(fuel);
-
-  }
-
-  // Method implementation that sets all instance variables.
-
-  public void setAllInstanceVariables() {
-
-    // This seems to do the same exact thing that
-    // the first Vehicle() constructor does.
-
-    Date date = new Date();
-
-    this.vehicleManufacturedDate = date;
-    this.vehicleManufacturer = "Generic";
-    this.vehicleMake = "Generic";
-    this.vehicleModel = "Generic";
-    this.vehicleFrame.setChassisType(chassis);
-    this.vehicleType = "Generic";
-    this.driveTrain = "2WD: Two-Wheel Drive";
-    this.vehicleEngine.setEngineType(Engine);
-
-  }
-
-  public Chassis getChassisType() {
 
   }
 
@@ -187,5 +162,39 @@ public class Vehicle implements Engine, Chassis {
 
   }
 
+  public Date getVehicleManufacturedDate() {
+    return vehicleManufacturedDate;
+  }
 
+  public String getVehicleManufacturer() {
+    return vehicleManufacturer;
+  }
+
+  public String getVehicleMake() {
+    return vehicleMake;
+  }
+
+  public String getVehicleModel() {
+    return vehicleModel;
+  }
+
+  public Chassis getVehicleFrame() {
+    return vehicleFrame;
+  }
+
+  public String getVehicleType() {
+    return vehicleType;
+  }
+
+  public String getDriveTrain() {
+    return driveTrain;
+  }
+
+  public Engine getVehicleEngine() {
+    return vehicleEngine;
+  }
+
+  public String getVehicleChassis() {
+    return vehicleChassis;
+  }
 }
