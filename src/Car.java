@@ -25,7 +25,7 @@ public class Car extends Vehicle {
       String driveTrain, ManufacturedEngine manufacturedEngine, Feature[] feature, int carAxle) {
 
     super(vehicleManufacturedDate, vehicleManufacturer,
-       vehicleMake, vehicleModel, vehicleChassis, vehicleType,
+        vehicleMake, vehicleModel, vehicleChassis, vehicleType,
         driveTrain, manufacturedEngine);
 
     this.feature = feature;

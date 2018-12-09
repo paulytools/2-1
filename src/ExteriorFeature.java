@@ -2,6 +2,10 @@ public class ExteriorFeature implements Feature {
 
   private String exteriorFeature;
 
+  public ExteriorFeature() {
+
+  }
+
   public ExteriorFeature(String exteriorFeature) {
 
     this.exteriorFeature = exteriorFeature;

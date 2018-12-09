@@ -33,7 +33,7 @@ public class VehicleChassis implements Chassis {
 
   }
 
-   public static void printDetails() {
+  public static void printDetails() {
 
     System.out.println("Chassis\t\t: Chassis");
     System.out.println("Vehicle Frame\t: Unibody");

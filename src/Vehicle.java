@@ -66,8 +66,6 @@ public class Vehicle implements Engine, Chassis {
 
   public Chassis getChassisType() {
 
-
-
   }
 
   public void setEngineMake(String engineMake) {
@@ -156,7 +154,7 @@ public class Vehicle implements Engine, Chassis {
         "Engine Make\t: " + vehicleManufacturer + "\n" +
         "Engine Model\t: " + engineModel + "\n" +
         "Engine Type\t: " + engineType + "\n" +
-        "Engine Cylinders\t: " + engineCylinders +"\n" +
+        "Engine Cylinders\t: " + engineCylinders + "\n" +
         "Drive Train\t: " + driveTrain;
 
 
