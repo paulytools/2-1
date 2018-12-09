@@ -4,6 +4,8 @@ public class ExteriorFeature implements Feature {
 
   public ExteriorFeature() {
 
+    this.exteriorFeature = "Default";
+
   }
 
   public ExteriorFeature(String exteriorFeature) {

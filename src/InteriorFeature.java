@@ -13,22 +13,17 @@ public class InteriorFeature implements Feature {
 
     this.interiorFeature = interiorFeature;
 
-
   }
 
   public String getFeature() {
 
-    // Create new String object
-    String string = new String();
-
-    return string;
+    return this.interiorFeature;
 
   }
 
   public void setFeature(String interiorFeature) {
 
     this.interiorFeature = interiorFeature;
-
 
   }
 

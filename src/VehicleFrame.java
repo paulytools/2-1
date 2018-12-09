@@ -28,8 +28,8 @@ public class VehicleFrame implements Chassis {
   }
 
   @Override
-  public String toString(String chassisName) {
-    return "Chassis : " + chassisName +
+  public String toString() {
+    return "Chassis : " + chassis +
         "Vehicle Frame : " + vehicleFrameType + '\'' +
         '}';
   }

@@ -10,22 +10,18 @@ public class Vehicle implements Engine, Chassis {
   private String vehicleType;
   private String driveTrain;
   private Engine vehicleEngine;
-  private String vehicleChassis;
 
 
   public Vehicle() {
 
-    Date date = new Date();
-
-    this.vehicleManufacturedDate = date;
+    this.vehicleManufacturedDate = new Date();
     this.vehicleManufacturer = "Generic";
     this.vehicleMake = "Generic";
     this.vehicleModel = "Generic";
-    this.vehicleFrame = new Vehicle();
+    this.vehicleFrame = new VehicleChassis();
     this.vehicleType = "Generic";
     this.driveTrain = "Generic";
-    this.vehicleEngine = new Vehicle();
-
+    this.vehicleEngine = new ManufacturedEngine();
 
   }
 
@@ -41,122 +37,6 @@ public class Vehicle implements Engine, Chassis {
     this.vehicleType = vehicleType;
     this.driveTrain = driveTrain;
     this.vehicleEngine = vehicleEngine;
-
-
-  }
-
-  public void setEngineCylinders(int engineCylinders) {
-
-    this.setEngineCylinders(engineCylinders);
-
-  }
-
-
-  public void setEngineManufacturedDate(Date date) {
-
-    this.setEngineManufacturedDate(date);
-
-  }
-
-  public void setEngineManufacturer(String manufacturer) {
-
-    this.setEngineManufacturedDate(vehicleManufacturedDate);
-
-  }
-
-  public Chassis getChassisType() {
-
-  }
-
-  public void setEngineMake(String engineMake) {
-    this.setEngineMake(engineMake);
-
-  }
-
-
-  public void setEngineModel(String engineModel) {
-
-    this.setEngineModel(engineModel);
-
-  }
-
-  public void setDriveTrain(String driveTrain) {
-
-    this.setDriveTrain(driveTrain);
-
-  }
-
-
-  public void setEngineType(String fuel) {
-
-    this.setEngineType(fuel);
-
-  }
-
-  public void setChassisType(String vehicleChassis) {
-
-    this.vehicleChassis = vehicleChassis;
-
-  }
-
-  @Override
-  public String toString() {
-
-    Date date = new Date();
-
-    return "Manufacturer Name\t: Generic\n" +
-        "Manufactured Date\t: " + date + "\n" +
-        "Vehicle Make\t: Generic\n" +
-        "Vehicle Model\t: Generic\n" +
-        "Vehicle Type\t: None\n" +
-        "Engine Manufacturer\t: Generic" +
-        "Engine Manufactured\t: " + date + "\n" +
-        "Engine Make\t: H-Series\n" +
-        "Engine Model\t: H23A1\n" +
-        "Engine Type\t: 88 AKI\n" +
-        "Engine Cylinders\t: 4\n" +
-        "Drive Train\t: 2WD: Two-Wheel Drive";
-
-  }
-
-  public static void printGenericStrings() {
-
-    Date date = new Date();
-
-    System.out.printf("Manufacturer Name\t: Honda\n" +
-        "Manufactured Date\t: " + date + "\n" +
-        "Vehicle Make\t: Honda\n" +
-        "Vehicle Model\t: Prelude\n" +
-        "Vehicle Type\t: null\n" +
-        "Engine Manufacturer\t: Honda" +
-        "Engine Manufactured\t: " + date + "\n" +
-        "Engine Make\t: Generic\n" +
-        "Engine Model\t: Generic\n" +
-        "Engine Type\t: 88 AKI\n" +
-        "Engine Cylinders\t: 0\n" +
-        "Drive Train\t: 2WD: Two-Wheel Drive");
-
-  }
-
-  public static String printSpecificStrings(String vehicleManufacturer,
-      Date vehicleManufacturedDate,
-      String vehicleMake, String vehicleModel, String vehicleType,
-      String engineManufacturer, Date engineManufactured,
-      String engineModel, String engineType, int engineCylinders, String driveTrain) {
-
-    return "Manufacturer Name\t: " + vehicleManufacturer + "\n" +
-        "Manufactured Date\t: " + vehicleManufacturedDate + "\n" +
-        "Vehicle Make\t: " + vehicleMake + "\n" +
-        "Vehicle Model\t: " + vehicleModel + "\n" +
-        "Vehicle Type\t: " + vehicleType + "\n" +
-        "Engine Manufacturer\t: " + engineManufacturer + "\n" +
-        "Engine Manufactured\t: " + vehicleManufacturedDate + "\n" +
-        "Engine Make\t: " + vehicleManufacturer + "\n" +
-        "Engine Model\t: " + engineModel + "\n" +
-        "Engine Type\t: " + engineType + "\n" +
-        "Engine Cylinders\t: " + engineCylinders + "\n" +
-        "Drive Train\t: " + driveTrain;
-
 
   }
 
@@ -192,7 +72,86 @@ public class Vehicle implements Engine, Chassis {
     return vehicleEngine;
   }
 
-  public String getVehicleChassis() {
-    return vehicleChassis;
+  public Chassis getChassisType() {
+    return vehicleFrame.getChassisType();
   }
+
+  public void setChassisType(String chassisType) {
+    vehicleFrame.setChassisType(chassisType);
+  }
+
+  public void setVehicleManufacturedDate(Date vehicleManufacturedDate) {
+    this.vehicleManufacturedDate = vehicleManufacturedDate;
+  }
+
+  public void setVehicleManufacturer(String vehicleManufacturer) {
+    this.vehicleManufacturer = vehicleManufacturer;
+  }
+
+  public void setVehicleMake(String vehicleMake) {
+    this.vehicleMake = vehicleMake;
+  }
+
+  public void setVehicleModel(String vehicleModel) {
+    this.vehicleModel = vehicleModel;
+  }
+
+  public void setVehicleFrame(Chassis vehicleFrame) {
+    this.vehicleFrame = vehicleFrame;
+  }
+
+  public void setVehicleType(String vehicleType) {
+    this.vehicleType = vehicleType;
+  }
+
+  public void setVehicleEngine(Engine vehicleEngine) {
+    this.vehicleEngine = vehicleEngine;
+  }
+
+  public void setDriveTrain(String driveTrain) {
+    this.driveTrain = driveTrain;
+  }
+
+  public void setEngineCylinders(int engineCylinders) {
+    vehicleEngine.setEngineCylinders(engineCylinders);
+  }
+
+  public void setEngineManufacturedDate(Date date) {
+    vehicleEngine.setEngineManufacturedDate(date);
+  }
+
+  public void setEngineManufacturer(String manufacturer) {
+    vehicleEngine.setEngineManufacturer(manufacturer);
+  }
+
+  public void setEngineMake(String engineMake) {
+    vehicleEngine.setEngineMake(engineMake);
+  }
+
+  public void setEngineModel(String engineModel) {
+    vehicleEngine.setEngineModel(engineModel);
+  }
+
+  public void setEngineType(String fuel) {
+    vehicleEngine.setEngineType(fuel);
+  }
+
+  @Override
+  public String toString() {
+
+    return "Manufacturer Name\t: " + this.vehicleManufacturer + "\n" +
+        "Manufactured Date\t: " + this.vehicleManufacturedDate + "\n" +
+        "Vehicle Make\t: " + this.vehicleMake + "\n" +
+        "Vehicle Model\t: " + this.vehicleModel + "\n" +
+        "Vehicle Type\t: " + this.vehicleType + "\n" +
+        "Engine Manufacturer\t: " + vehicleEngine.. + "\n" +
+        "Engine Manufactured\t: " +  + "\n" +
+        "Engine Make\t: H-Series\n" +
+        "Engine Model\t: H23A1\n" +
+        "Engine Type\t: 88 AKI\n" +
+        "Engine Cylinders\t: 4\n" +
+        "Drive Train\t: 2WD: Two-Wheel Drive";
+
+  }
+
 }

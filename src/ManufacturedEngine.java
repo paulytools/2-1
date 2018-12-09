@@ -78,16 +78,44 @@ public class ManufacturedEngine implements Engine {
 
   }
 
+  public String getEngineManufacturer() {
+    return engineManufacturer;
+  }
+
+  public Date getEngineManufacturedDate() {
+    return engineManufacturedDate;
+  }
+
+  public String getEngineMake() {
+    return engineMake;
+  }
+
+  public String getEngineModel() {
+    return engineModel;
+  }
+
+  public int getEngineCylinders() {
+    return engineCylinders;
+  }
+
+  public String getEngineType() {
+    return engineType;
+  }
+
+  public String getDriveTrain() {
+    return driveTrain;
+  }
+
   @Override
   public String toString() {
 
-    return "Engine Manufacturer : " + engineManufacturer + "\n" +
-        "Engine Manufactured : " + engineManufacturedDate + "\n" +
-        "Engine Make\t : " + engineMake + "\n" +
-        "Engine Model\t : " + engineModel + "\n" +
-        "Engine Type\t : " + engineType + "\n" +
-        "Engine Cylinders\t : " + engineCylinders + "\n" +
-        "Drive Train\t : " + driveTrain;
+    return "Engine Manufacturer : " + this.engineManufacturer + "\n" +
+        "Engine Manufactured : " + this.engineManufacturedDate + "\n" +
+        "Engine Make\t : " + this.engineMake + "\n" +
+        "Engine Model\t : " + this.engineModel + "\n" +
+        "Engine Type\t : " + this.engineType + "\n" +
+        "Engine Cylinders\t : " + this.engineCylinders + "\n" +
+        "Drive Train\t : " + this.driveTrain;
 
   }
 

@@ -42,7 +42,7 @@ public class Car extends Vehicle {
         "Vehicle Model\t: Generic\n" +
         "Vehicle Type\t: None\n" +
         "Engine Manufacturer\t: Generic" +
-        "Engine Manufactured\t: " + this.vehicleManufacturedDate + "\n" +
+        "Engine Manufactured\t: " + this + "\n" +
         "Engine Make\t: H-Series\n" +
         "Engine Model\t: H23A1\n" +
         "Engine Type\t: 88 AKI\n" +
