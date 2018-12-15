@@ -88,6 +88,7 @@ public class Vehicle implements Engine, Chassis {
     this.vehicleManufacturer = vehicleManufacturer;
   }
 
+
   public void setVehicleMake(String vehicleMake) {
     this.vehicleMake = vehicleMake;
   }
@@ -144,13 +145,7 @@ public class Vehicle implements Engine, Chassis {
         "Vehicle Make\t: " + this.vehicleMake + "\n" +
         "Vehicle Model\t: " + this.vehicleModel + "\n" +
         "Vehicle Type\t: " + this.vehicleType + "\n" +
-        "Engine Manufacturer\t: " + vehicleEngine.. + "\n" +
-        "Engine Manufactured\t: " +  + "\n" +
-        "Engine Make\t: H-Series\n" +
-        "Engine Model\t: H23A1\n" +
-        "Engine Type\t: 88 AKI\n" +
-        "Engine Cylinders\t: 4\n" +
-        "Drive Train\t: 2WD: Two-Wheel Drive";
+        this.vehicleEngine.toString();
 
   }
 

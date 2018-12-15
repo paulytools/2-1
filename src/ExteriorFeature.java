@@ -27,25 +27,17 @@ public class ExteriorFeature implements Feature {
   }
 
   public void setExteriorFeature(String exteriorFeature) {
+
     this.exteriorFeature = exteriorFeature;
+
   }
 
   @Override
   public String toString() {
-    return "Exterior [Generic]";
-  }
 
-  public static void printAllFuelGradeValues() {
-
-    System.out.println("Exterior [Generic]");
-
+    return "Exterior [" + exteriorFeature + "]";
 
   }
 
-  public static void printSpecificFuelGradeValues() {
-
-    System.out.println("Exterior [Fog Lamps]");
-
-  }
 
 }

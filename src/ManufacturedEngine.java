@@ -79,31 +79,31 @@ public class ManufacturedEngine implements Engine {
   }
 
   public String getEngineManufacturer() {
-    return engineManufacturer;
+    return this.engineManufacturer;
   }
 
   public Date getEngineManufacturedDate() {
-    return engineManufacturedDate;
+    return this.engineManufacturedDate;
   }
 
   public String getEngineMake() {
-    return engineMake;
+    return this.engineMake;
   }
 
   public String getEngineModel() {
-    return engineModel;
+    return this.engineModel;
   }
 
   public int getEngineCylinders() {
-    return engineCylinders;
+    return this.engineCylinders;
   }
 
   public String getEngineType() {
-    return engineType;
+    return this.engineType;
   }
 
   public String getDriveTrain() {
-    return driveTrain;
+    return this.driveTrain;
   }
 
   @Override
@@ -118,31 +118,5 @@ public class ManufacturedEngine implements Engine {
         "Drive Train\t : " + this.driveTrain;
 
   }
-
-  public void printGenericStrings() {
-
-    System.out.println("Engine Manufacturer : " + "Generic" + "\n" +
-        "Engine Manufactured : " + this.engineManufacturedDate + "\n" +
-        "Engine Make\t : " + "Generic" + "\n" +
-        "Engine Model\t : " + "Generic" + "\n" +
-        "Engine Type\t : " + "85 AKI" + "\n" +
-        "Engine Cylinders\t : " + 0 + "\n" +
-        "Drive Train\t : " + "2WD: Two-Wheel Drive");
-
-
-  }
-
-  public void printStringsWithParameters() {
-
-    System.out.println("Engine Manufacturer : " + this.engineManufacturer + "\n" +
-        "Engine Manufactured : " + this.engineManufacturedDate + "\n" +
-        "Engine Make\t : " + this.engineMake + "\n" +
-        "Engine Model\t : " + this.engineModel + "\n" +
-        "Engine Type\t : " + this.engineType + "\n" +
-        "Engine Cylinders\t : " + this.engineCylinders + "\n" +
-        "Drive Train\t : " + this.driveTrain);
-
-  }
-
 
 }

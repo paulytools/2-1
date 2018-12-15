@@ -4,11 +4,11 @@ public class Main {
 
   public static void main(String[] args) {
 
-    //testVehicleChassis();
-    //testVehicleFrame();
-    //testManufacturedEngine();
-    //testFeatures();
-    //testVehicle();
+    testVehicleChassis();
+    testVehicleFrame();
+    testManufacturedEngine();
+    testFeatures();
+    testVehicle();
     testCar();
   }
 

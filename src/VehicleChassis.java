@@ -11,7 +11,7 @@ public class VehicleChassis implements Chassis {
 
   VehicleChassis(String chassisName) {
 
-    this.chassisName = chassis;
+    this.chassisName = chassisName;
 
   }
 
@@ -29,15 +29,7 @@ public class VehicleChassis implements Chassis {
 
   public String toString() {
 
-    return "Chassis Name\t\t\t: Chassis";
-
-  }
-
-  public static void printDetails() {
-
-    System.out.println("Chassis\t\t: Chassis");
-    System.out.println("Vehicle Frame\t: Unibody");
-    System.out.println("Vehicle Frame\t: Ladder Frame");
+    return "Chassis Name\t\t\t: " + this.chassisName;
 
   }
 

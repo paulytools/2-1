@@ -29,21 +29,7 @@ public class InteriorFeature implements Feature {
 
   @Override
   public String toString() {
-    return "Interior [Generic]";
+    return "Interior [" + interiorFeature +"]";
   }
-
-  public static void printAllFuelGradeValues() {
-
-    System.out.println("Interior [Generic]");
-
-
-  }
-
-  public static void printSpecificFuelGradeValues() {
-
-    System.out.println("Interior [Climate Control]");
-
-  }
-
 
 }
