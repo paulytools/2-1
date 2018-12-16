@@ -32,32 +32,27 @@ public class Car extends Vehicle {
   @Override
   public String toString() {
 
-    return "Manufacturer Name\t: " + super.getVehicleManufacturer() + "\n" +
-        "Manufactured Date\t: " + super.getVehicleManufacturedDate() + "\n" +
-        "Vehicle Make\t: " + super.getVehicleMake() + "\n" +
-        "Vehicle Model\t: " + super.getVehicleModel() + "\n" +
-        "Vehicle Type\t: " + super.getVehicleType() + "\n" +
-        super.getVehicleEngine().toString() +   // ArrayIndexOfOutBoundsException: 4
-        "\nFeatures\t\t: Interior [" + feature[1] + "]\n" +
-        "\t\t\t: Exterior [" + feature[2] + "]\n" +
-        "\t\t\t: Interior [" + feature[3] + "]\n" +
-        "\t\t\t: Exterior [" + feature[4] + "]\n" +
+    return super.toString() +
+        "Features\t\t: Interior [" + feature[0] + "]\n" +
+        "\t\t\t: Exterior [" + feature[1] + "]\n" +
+        "\t\t\t: Interior [" + feature[2] + "]\n" +
+        "\t\t\t: Exterior [" + feature[3] + "]\n" +
         "Car Axle\t\t\t: " + this.carAxle;
   }
 
 
   public String getExteriorFeatures() {
 
-    return "Exterior Features\t: Exterior [" + this.feature[2] + "]\n" +
-        "\t\t\t: Exterior [" + this.feature[4] + "]\n";
+    return "Exterior Features\t: Exterior [" + this.feature[1] + "]\n" +
+        "\t\t\t: Exterior [" + this.feature[3] + "]\n";
 
   }
 
 
   public String getInteriorFeatures() {
 
-    return "Interior Features\t: Interior [" + this.feature[1] + "]\n" +
-        "\t\t\t: Interior [" + this.feature[3] + "]";
+    return "Interior Features\t: Interior [" + this.feature[0] + "]\n" +
+        "\t\t\t: Interior [" + this.feature[2] + "]";
 
   }
 

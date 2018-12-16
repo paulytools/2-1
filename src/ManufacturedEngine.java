@@ -115,7 +115,7 @@ public class ManufacturedEngine implements Engine {
         "Engine Model\t : " + this.engineModel + "\n" +
         "Engine Type\t : " + this.engineType + "\n" +
         "Engine Cylinders\t : " + this.engineCylinders + "\n" +
-        "Drive Train\t : " + this.driveTrain;
+        "Drive Train\t : " + this.driveTrain + "\n";
 
   }
 
