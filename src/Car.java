@@ -33,26 +33,25 @@ public class Car extends Vehicle {
   public String toString() {
 
     return super.toString() +
-        "Features\t\t: Interior [" + feature[0] + "]\n" +
-        "\t\t\t: Exterior [" + feature[1] + "]\n" +
-        "\t\t\t: Interior [" + feature[2] + "]\n" +
-        "\t\t\t: Exterior [" + feature[3] + "]\n" +
+        "Features\t\t: \n" +
+        getInteriorFeatures() +
+        getExteriorFeatures() +
         "Car Axle\t\t\t: " + this.carAxle;
   }
 
 
   public String getExteriorFeatures() {
 
-    return "Exterior Features\t: Exterior [" + this.feature[1] + "]\n" +
-        "\t\t\t: Exterior [" + this.feature[3] + "]\n";
+    return this.feature[1] + "\n" +
+        this.feature[3] + "\n";
 
   }
 
 
   public String getInteriorFeatures() {
 
-    return "Interior Features\t: Interior [" + this.feature[0] + "]\n" +
-        "\t\t\t: Interior [" + this.feature[2] + "]";
+    return this.feature[0] + "\n" +
+        this.feature[2] + "\n";
 
   }
 
