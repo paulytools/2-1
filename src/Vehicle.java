@@ -11,7 +11,6 @@ public class Vehicle implements Engine, Chassis {
   private String driveTrain;
   private Engine vehicleEngine;
 
-
   public Vehicle() {
 
     this.vehicleManufacturedDate = new Date();

@@ -12,7 +12,7 @@ public class Car extends Vehicle {
         "null", "type",
         new ManufacturedEngine("Honda", new Date(), "H-series",
             "H23A1", "88 AKI", 4, "2WD: Two-Wheel Drive")
-        );
+    );
 
   }
 
@@ -32,12 +32,12 @@ public class Car extends Vehicle {
   @Override
   public String toString() {
 
-    return "Manufacturer Name\t: " + super.getVehicleManufacturer() +"\n" +
+    return "Manufacturer Name\t: " + super.getVehicleManufacturer() + "\n" +
         "Manufactured Date\t: " + super.getVehicleManufacturedDate() + "\n" +
-        "Vehicle Make\t: " + super.getVehicleMake() +"\n" +
+        "Vehicle Make\t: " + super.getVehicleMake() + "\n" +
         "Vehicle Model\t: " + super.getVehicleModel() + "\n" +
         "Vehicle Type\t: " + super.getVehicleType() + "\n" +
-        super.getVehicleEngine() +
+        super.getVehicleEngine().toString() +   // ArrayIndexOfOutBoundsException: 4
         "\nFeatures\t\t: Interior [" + feature[1] + "]\n" +
         "\t\t\t: Exterior [" + feature[2] + "]\n" +
         "\t\t\t: Interior [" + feature[3] + "]\n" +
@@ -48,7 +48,7 @@ public class Car extends Vehicle {
 
   public String getExteriorFeatures() {
 
-    return "Exterior Features\t: Exterior ["+ this.feature[2] + "]\n" +
+    return "Exterior Features\t: Exterior [" + this.feature[2] + "]\n" +
         "\t\t\t: Exterior [" + this.feature[4] + "]\n";
 
   }
@@ -57,7 +57,7 @@ public class Car extends Vehicle {
   public String getInteriorFeatures() {
 
     return "Interior Features\t: Interior [" + this.feature[1] + "]\n" +
-        "\t\t\t: Interior [" + this.feature[3]  + "]";
+        "\t\t\t: Interior [" + this.feature[3] + "]";
 
   }
 
