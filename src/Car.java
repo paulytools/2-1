@@ -7,12 +7,17 @@ public class Car extends Vehicle {
 
   public Car() {
 
-    super(new Date(), "Honda", "Prelude", "Coupe",
+    super(new Date(), "Generic", "Generic", "Generic",
         new VehicleChassis("Unibody"),
         "null", "type",
         new ManufacturedEngine("Honda", new Date(), "H-series",
-            "H23A1", "88 AKI", 4, "2WD: Two-Wheel Drive")
+            "H23A1", "88 AKI", 0, "2WD: Two-Wheel Drive")
     );
+
+    this.feature[0] = new InteriorFeature("No Interior Features");
+    this.feature[1] = new ExteriorFeature("No Exterior Features");
+    this.carAxle = 2;
+
 
   }
 
